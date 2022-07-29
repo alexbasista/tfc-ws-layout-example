@@ -13,6 +13,6 @@ provider "random" {
 
 resource "random_pet" "app_db" {
     length    = 2
-    prefix    = "db-"
+    prefix    = "db"
     separator = "-"
 }

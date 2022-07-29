@@ -13,6 +13,6 @@ provider "random" {
 
 resource "random_pet" "app_web" {
     length    = 2
-    prefix    = "web-"
+    prefix    = "web"
     separator = "-"
 }

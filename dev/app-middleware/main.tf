@@ -13,6 +13,6 @@ provider "random" {
 
 resource "random_pet" "app_middleware" {
     length    = 2
-    prefix    = "middleware-"
+    prefix    = "middleware"
     separator = "-"
 }

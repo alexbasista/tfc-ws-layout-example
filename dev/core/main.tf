@@ -13,6 +13,6 @@ provider "random" {
 
 resource "random_pet" "core" {
     length    = 2
-    prefix    = "core-"
+    prefix    = "core"
     separator = "-"
 }
