@@ -24,5 +24,5 @@ resource "random_pet" "app_web" {
 
 resource "random_id" "from_core" {
   byte_length = 6
-  prefix      = data.tfe_outputs.from_core.id
+  prefix      = data.tfe_outputs.from_core.values.core_pet
 }
