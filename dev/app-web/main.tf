@@ -11,7 +11,7 @@ provider "random" {
   # Configuration options
 }
 
-data "tfe_outputs" "foo" {
+data "tfe_outputs" "from_core" {
   organization = var.tfe_organization
   workspace    = var.tfe_outputs_workspace
 }
@@ -20,4 +20,9 @@ resource "random_pet" "app_web" {
     length    = 2
     prefix    = "web"
     separator = "-"
+}
+
+resource "random_id" "from_core" {
+  byte_length = 6
+  prefix      = data.tfe_outputs.from_core.id
 }
