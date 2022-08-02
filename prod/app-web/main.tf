@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.3.2"
     }
   }
@@ -12,7 +12,7 @@ provider "random" {
 }
 
 resource "random_pet" "app_web" {
-    length    = 2
-    prefix    = "web"
-    separator = "-"
+  length    = 2
+  prefix    = "web"
+  separator = "-"
 }

@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.3.2"
     }
   }
@@ -17,11 +17,11 @@ data "tfe_outputs" "from_core" {
 }
 
 resource "random_pet" "app_web" {
-    length    = 2
-    prefix    = "web"
-    separator = "-"
+  length    = 2
+  prefix    = "web"
+  separator = "-"
 
-    keepers = {
-      core_pet = data.tfe_outputs.from_core.values.core_pet
-    }
+  keepers = {
+    core_pet = data.tfe_outputs.from_core.values.core_pet
+  }
 }
