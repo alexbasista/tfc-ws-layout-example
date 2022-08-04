@@ -39,3 +39,5 @@ resource "random_id" "app_web" {
 # output "remote_state" {
 #   value = data.terraform_remote_state.fetch.outputs
 # }
+
+# testing Speculative Plan
