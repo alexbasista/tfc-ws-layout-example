@@ -1,3 +1,3 @@
-output "web_pet" {
-  value = random_pet.app_web.id
+output "web_id" {
+  value = random_id.app_web.result
 }
