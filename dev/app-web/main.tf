@@ -28,8 +28,8 @@ data "tfe_outputs" "from_core" {
 
 resource "random_id" "app_web" {
   byte_length = 4
-  #prefix      = data.tfe_outputs.from_core.values.core_pet
-  prefix      = "test"
+  prefix      = data.tfe_outputs.from_core.values.core_pet
+  #prefix      = "test"
 
   keepers = {
     core_pet = data.tfe_outputs.from_core.values.core_pet
