@@ -15,4 +15,8 @@ resource "random_pet" "core" {
   length    = 2
   prefix    = "core"
   separator = "-"
+
+  keepers = {
+    "keeper" = var.keeper
+  }
 }
