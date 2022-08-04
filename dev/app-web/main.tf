@@ -25,17 +25,17 @@ resource "random_id" "app_web" {
   }
 }
 
-data "terraform_remote_state" "fetch" {
-  backend = "remote"
-  config = {
-    organization = var.tfe_organization
+# data "terraform_remote_state" "fetch" {
+#   backend = "remote"
+#   config = {
+#     organization = var.tfe_organization
     
-    workspaces = {
-      name = var.tfe_outputs_workspace
-    }
-  }
-}
+#     workspaces = {
+#       name = var.tfe_outputs_workspace
+#     }
+#   }
+# }
 
-output "remote_state" {
-  value = data.terraform_remote_state.fetch.outputs
-}
+# output "remote_state" {
+#   value = data.terraform_remote_state.fetch.outputs
+# }
